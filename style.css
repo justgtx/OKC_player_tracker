@@ -1,0 +1,11 @@
+sga{
+    animation: fadeIn 2s ease-in-out;
+    animation: trophyjpeg;  
+}
+div{
+    background-color: cadetblue;
+    background-image: url('okc.jpg');
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+}
