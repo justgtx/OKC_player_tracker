@@ -1,11 +1,150 @@
-sga{
-    animation: fadeIn 2s ease-in-out;
-    animation: trophyjpeg;  
+:root {
+  --navy: #0c2340;
+  --blue: #007ac1;
+  --orange: #ef3b24;
+  --paper: #f3f5f8;
+  --ink: #10141c;
+  --muted: #5c6b82;
 }
-div{
-    background-color: cadetblue;
-    background-image: url('okc.jpg');
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    background-size: cover;
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--navy);
+  color: var(--paper);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 28px 24px 12px;
+}
+
+.team-logo {
+  border-radius: 8px;
+}
+
+.wordmark {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 44px;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1;
+  color: var(--paper);
+}
+
+.season {
+  margin: 4px 0 0;
+  color: var(--blue);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.matchup {
+  padding: 4px 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.scout-btn {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.scout-btn:hover { transform: translateY(-1px); }
+.scout-btn:active { transform: translateY(0); }
+.scout-btn:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+
+.matchup-result {
+  margin: 0;
+  font-size: 14px;
+  color: var(--paper);
+  opacity: 0.9;
+}
+
+.roster-rail {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 4px 24px 32px;
+}
+
+.roster-rail::-webkit-scrollbar { height: 8px; }
+.roster-rail::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 4px; }
+.roster-rail::-webkit-scrollbar-track { background: transparent; }
+
+.player-card {
+  flex: 0 0 168px;
+  scroll-snap-align: start;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 14px;
+  border-left: 5px solid var(--blue);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.player-card[data-role="rookie"] {
+  border-left-color: var(--orange);
+}
+
+.player-card.selected {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 2px var(--orange), 0 8px 18px rgba(0,0,0,0.35);
+}
+
+.player-card[data-role="veteran"].selected {
+  box-shadow: 0 0 0 2px var(--blue), 0 8px 18px rgba(0,0,0,0.35);
+}
+
+.card-number {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  color: var(--blue);
+  line-height: 1;
+}
+
+.player-card[data-role="rookie"] .card-number {
+  color: var(--orange);
+}
+
+.card-name {
+  font-size: 15px;
+  margin: 6px 0 4px;
+  line-height: 1.2;
+}
+
+.card-role {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.card-blurb {
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .player-card { flex-basis: 140px; }
+  .wordmark { font-size: 34px; }
 }
