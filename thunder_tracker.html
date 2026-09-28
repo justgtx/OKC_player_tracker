@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OKC Thunder Player Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <img src="okc.png" alt="OKC Thunder logo" class="team-logo" width="64" height="64">
+    <div class="hero-text">
+      <h1 class="wordmark">THUNDER</h1>
+      <p class="season">2026–2027 Roster Tracker</p>
+    </div>
+  </header>
+
+  <section class="matchup">
+    <button id="scout-btn" class="scout-btn">Scout a matchup</button>
+    <p id="matchup-result" class="matchup-result">Pick a veteran and a rookie to scout tonight.</p>
+  </section>
+
+  <main class="roster-rail" id="roster-rail">
+
+    <article class="player-card" data-role="veteran" data-name="Shai Gilgeous-Alexander">
+      <span class="card-number">2</span>
+      <h2 class="card-name">Shai Gilgeous-Alexander</h2>
+      <span class="card-role">Veteran</span>
+      <p class="card-blurb">Known for his scoring ability and aura farming while staying completely nonchalant.</p>
+    </article>
+
+    <article class="player-card" data-role="veteran" data-name="Jared McCain">
+      <span class="card-number">3</span>
+      <h2 class="card-name">Jared McCain</h2>
+      <span class="card-role">Veteran</span>
+      <p class="card-blurb">Promising young guard known for TikTok dances and showcasing skills on social media.</p>
+    </article>
+
+    <article class="player-card" data-role="veteran" data-name="Jaylin Williams">
+      <span class="card-number">6</span>
+      <h2 class="card-name">Jaylin Williams</h2>
+      <span class="card-role">Veteran</span>
+      <p class="card-blurb">The self-proclaimed "Asian Duke Dennis" — usually found dancing with Jared McCain.</p>
+    </article>
+
+    <article class="player-card" data-role="veteran" data-name="Chet Holmgren">
+      <span class="card-number">7</span>
+      <h2 class="card-name">Chet Holmgren</h2>
+      <span class="card-role">Veteran</span>
+      <p class="card-blurb">Versatile big man known for being tall and making Wemby cry back in high school.</p>
+    </article>
+
+    <article class="player-card" data-role="veteran" data-name="Jalen Williams">
+      <span class="card-number">8</span>
+      <h2 class="card-name">Jalen Williams</h2>
+      <span class="card-role">Veteran</span>
+      <p class="card-blurb">Dynamic wing who's just as engaging on social media as he is on the court.</p>
+    </article>
+
+    <article class="player-card" data-role="veteran" data-name="Alex Caruso">
+      <span class="card-number">9</span>
+      <h2 class="card-name">Alex Caruso</h2>
+      <span class="card-role">Veteran</span>
+      <p class="card-blurb">Defensive menace, the oldest guy on the roster, and proudly bald about it.</p>
+    </article>
+
+    <article class="player-card" data-role="rookie" data-name="Thomas Sorber">
+      <span class="card-number">12</span>
+      <h2 class="card-name">Thomas Sorber</h2>
+      <span class="card-role">Rookie</span>
+      <p class="card-blurb">Raw potential and enthusiasm to spare — still learning the pace of the league.</p>
+    </article>
+
+    <article class="player-card" data-role="rookie" data-name="Otega Oweh">
+      <span class="card-number">13</span>
+      <h2 class="card-name">Otega Oweh</h2>
+      <span class="card-role">Rookie</span>
+      <p class="card-blurb">Athletic wing still finding his role — a finisher above the rim in transition.</p>
+    </article>
+
+    <article class="player-card" data-role="rookie" data-name="Bennett Stirtz">
+      <span class="card-number">14</span>
+      <h2 class="card-name">Bennett Stirtz</h2>
+      <span class="card-role">Rookie</span>
+      <p class="card-blurb">Sharp-shooting rookie guard working his way into rotation minutes.</p>
+    </article>
+
+    <article class="player-card" data-role="rookie" data-name="Aday Mara">
+      <span class="card-number">15</span>
+      <h2 class="card-name">Aday Mara</h2>
+      <span class="card-role">Rookie</span>
+      <p class="card-blurb">Towering rookie big still adjusting to the speed of the NBA.</p>
+    </article>
+
+    <article class="player-card" data-role="veteran" data-name="Cason Wallace">
+      <span class="card-number">22</span>
+      <h2 class="card-name">Cason Wallace</h2>
+      <span class="card-role">Veteran</span>
+      <p class="card-blurb">Unpredictable in the best way — capable of randomly dropping 25 on any given night.</p>
+    </article>
+
+    <article class="player-card" data-role="veteran" data-name="Brooks Barnhizer">
+      <span class="card-number">23</span>
+      <h2 class="card-name">Brooks Barnhizer</h2>
+      <span class="card-role">Veteran</span>
+      <p class="card-blurb">Bench energy guy — hustle plays now, bigger role pending.</p>
+    </article>
+
+    <article class="player-card" data-role="veteran" data-name="Ajay Mitchell">
+      <span class="card-number">25</span>
+      <h2 class="card-name">Ajay Mitchell</h2>
+      <span class="card-role">Veteran</span>
+      <p class="card-blurb">Second-year guard with a smooth pull-up and a knack for late-game buckets.</p>
+    </article>
+
+    <article class="player-card" data-role="veteran" data-name="Kenrich Williams">
+      <span class="card-number">34</span>
+      <h2 class="card-name">Kenrich Williams</h2>
+      <span class="card-role">Veteran</span>
+      <p class="card-blurb">The Weakside Mafia enforcer — always in the right spot, rarely in the highlight reel.</p>
+    </article>
+
+    <article class="player-card" data-role="veteran" data-name="Nikola Topic">
+      <span class="card-number">44</span>
+      <h2 class="card-name">Nikola Topic</h2>
+      <span class="card-role">Veteran</span>
+      <p class="card-blurb">Still working back to full speed, but flashes pick-and-roll vision worth the wait.</p>
+    </article>
+
+    <article class="player-card" data-role="veteran" data-name="Isaiah Hartenstein">
+      <span class="card-number">—</span>
+      <h2 class="card-name">Isaiah Hartenstein</h2>
+      <span class="card-role">Veteran</span>
+      <p class="card-blurb">Paint anchor — rebounds, rim protection, and elbow passes on repeat.</p>
+    </article>
+
+    <article class="player-card" data-role="rookie" data-name="Josh Dix">
+      <span class="card-number">—</span>
+      <h2 class="card-name">Josh Dix</h2>
+      <span class="card-role">Rookie</span>
+      <p class="card-blurb">Two-way rookie hoping to shoot his way into the rotation.</p>
+    </article>
+
+    <article class="player-card" data-role="rookie" data-name="Cristoph Tilly">
+      <span class="card-number">—</span>
+      <h2 class="card-name">Cristoph Tilly</h2>
+      <span class="card-role">Rookie</span>
+      <p class="card-blurb">Stretch-five rookie still learning the NBA's speed and spacing.</p>
+    </article>
+
+  </main>
+
+  <script src="webthunder.js"></script>
+</body>
+</html>
